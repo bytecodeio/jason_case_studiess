@@ -50,7 +50,7 @@ explore: inventory_items {
     relationship: many_to_one
   }
 }
-
+##keep only this one
 explore: order_items {
   join: inventory_items {
     type: left_outer
