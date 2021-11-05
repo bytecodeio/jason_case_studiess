@@ -79,18 +79,46 @@ view: order_items {
     sql: ${TABLE}."SALE_PRICE" ;;
   }
 
+  measure: total_sale_price {
+    type: sum
+    label: "Total Sales Price"
+    sql: ${sale_price} ;;
+    value_format_name: usd
+  }
+
+  measure: total_cost {
+    type: sum
+    label: "Total Cost"
+    sql: ${inventory_items.cost} ;;
+    value_format_name: usd
+  }
+
+
   # A measure is a field that uses a SQL aggregate function. Here are defined sum and average
   # measures for this dimension, but you can also add measures of many different aggregates.
   # Click on the type parameter to see all the options in the Quick Help panel on the right.
 
-  measure: total_sale_price {
-    type: sum
-    sql: ${sale_price} ;;
-  }
 
   measure: average_sale_price {
     type: average
+    label: "Average Sales Price"
     sql: ${sale_price} ;;
+    value_format_name: usd
+  }
+
+  measure: total_gross_revenue {
+    type: sum
+    label: "Total Gross Revenue"
+    sql: ${sale_price} ;;
+    filters: [status: "Complete"]
+    value_format_name: usd
+  }
+
+  measure: cumulative_total_sales {
+    type: running_total
+    label: "Cumulative Total Sales"
+    sql: ${sale_price} ;;
+    value_format_name: usd
   }
 
   dimension_group: shipped {

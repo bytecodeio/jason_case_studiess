@@ -27,14 +27,15 @@ view: inventory_items {
   # measures for this dimension, but you can also add measures of many different aggregates.
   # Click on the type parameter to see all the options in the Quick Help panel on the right.
 
-  measure: total_cost {
-    type: sum
-    sql: ${cost} ;;
-  }
+  # measure: total_cost {
+  #   type: sum
+  #   sql: ${cost} ;;
+  # }
 
-  measure: average_cost {
-    type: average
-    sql: ${cost} ;;
+   measure: average_cost {
+     type: average
+     sql: ${cost} ;;
+    value_format_name: usd
   }
 
   # Dates and timestamps can be represented in Looker using a dimension group of type: time.
