@@ -93,6 +93,14 @@ view: order_items {
     value_format_name: usd
   }
 
+  measure: total_gross_margin {
+    type: number
+    label: "Total Gross Margin Amount"
+    sql: ${total_gross_revenue}-${inventory_items.cost} ;;
+    value_format_name: usd
+  }
+
+
 
   # A measure is a field that uses a SQL aggregate function. Here are defined sum and average
   # measures for this dimension, but you can also add measures of many different aggregates.
@@ -105,6 +113,20 @@ view: order_items {
     sql: ${sale_price} ;;
     value_format_name: usd
   }
+
+  dimension: gross_margin {
+    type: number
+    label: "Gross Revenue"
+    sql: ${TABLE}."SALE_PRICE"-${inventory_items.cost} ;;
+  }
+
+  measure: average_gross_margin {
+    type: average
+    label: "Average Gross Margin"
+    sql: ${gross_margin} ;;
+    value_format_name: usd
+  }
+
 
   measure: total_gross_revenue {
     type: sum

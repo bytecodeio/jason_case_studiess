@@ -34,6 +34,7 @@ view: inventory_items {
 
    measure: average_cost {
      type: average
+     label: "Average Cost"
      sql: ${cost} ;;
     value_format_name: usd
   }
