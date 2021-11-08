@@ -81,6 +81,12 @@ view: users {
     sql: DATEDIFF(day,${created_date},CURRENT_DATE()) ;;
   }
 
+  dimension: new_customer {
+    type: string
+    label: "New Customer"
+    sql: if(${DayCheck}<=90,"Yes","No");;
+  }
+
   dimension: email {
     type: string
     sql: ${TABLE}."EMAIL" ;;
