@@ -98,6 +98,7 @@ view: order_items {
     label: "Total Gross Margin Amount"
     sql: ${gross_margin} ;;
     value_format_name: usd
+    drill_fields: [products.brand, products.category,total_gross_margin]
   }
 
 
@@ -125,6 +126,7 @@ view: order_items {
     label: "Average Gross Margin"
     sql: ${gross_margin} ;;
     value_format_name: usd
+
   }
 
 
