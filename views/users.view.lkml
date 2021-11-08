@@ -82,9 +82,9 @@ view: users {
   }
 
   dimension: new_customer {
-    type: string
+    type: yesno
     label: "New Customer"
-    sql: if(${DayCheck}<=90,'Yes','No');;
+    sql: ${DayCheck}<=90;;
   }
 
   dimension: email {
