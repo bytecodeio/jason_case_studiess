@@ -150,7 +150,7 @@ view: order_items {
     type: number
     label: "Gross Margin Percentage"
     sql: 1.0*(${total_gross_margin}/NULLIF(${total_gross_revenue},0)) ;;
-    value_format_name: percent_2
+
   }
 
 
