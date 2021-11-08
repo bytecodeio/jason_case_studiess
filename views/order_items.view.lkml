@@ -117,7 +117,7 @@ view: order_items {
 
   dimension: gross_margin {
     type: number
-    label: "Gross Revenue"
+    label: "Gross Margin"
     sql: ${TABLE}."SALE_PRICE"-${inventory_items.cost} ;;
   }
 
