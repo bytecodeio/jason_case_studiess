@@ -75,10 +75,10 @@ view: users {
     sql: ${TABLE}."CREATED_AT" ;;
   }
 
-  dimension: new_user {
-    label: "New User"
+  dimension: DayCheck {
+    label: "Days as Customer"
     type: string
-    sql: if(datediff(day,${created_date},CURRENT_DATE())>=90,"New","Long Term") ;;
+    sql: DATEDIFF(day,${created_date},now()) ;;
   }
 
   dimension: email {
