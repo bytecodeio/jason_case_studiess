@@ -184,6 +184,7 @@ view: order_items {
     type: number
     label: "Average Spend Per Customer"
     sql: 1.0*(${total_sale_price}/${total_users}) ;;
+    value_format_name: usd
   }
 
 
