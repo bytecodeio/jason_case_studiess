@@ -134,7 +134,7 @@ view: order_items {
     type: sum
     label: "Total Gross Revenue"
     sql: ${sale_price} ;;
-    filters: [status: "Complete"]
+    filters: [status: "Complete, Shipped, Processing"]
     value_format_name: usd
   }
 
