@@ -78,7 +78,7 @@ view: users {
   dimension: new_user {
     label: "New User"
     type: string
-    sql: if(DATE_DIFF(day,${created_date},CURRENT_DATE())>=90,"New","Long Term") ;;
+    sql: if(DATE_DIFF("d",${created_date},CURRENT_DATE())>=90,"New","Long Term") ;;
   }
 
   dimension: email {
