@@ -94,9 +94,9 @@ view: order_items {
   }
 
   measure: total_gross_margin {
-    type: number
+    type: sum
     label: "Total Gross Margin Amount"
-    sql: ${total_gross_revenue}-${inventory_items.cost} ;;
+    sql: ${gross_margin} ;;
     value_format_name: usd
   }
 
