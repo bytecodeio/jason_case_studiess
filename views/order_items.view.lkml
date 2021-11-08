@@ -136,11 +136,61 @@ view: order_items {
     value_format_name: usd
   }
 
-  measure: cumulative_total_sales {
-    type: running_total
-    label: "Cumulative Total Sales"
-    sql: ${sale_price} ;;
+  measure: total_returned {
+    type: count_distinct
+    label: "Total Returned"
+    sql: ${id} ;;
+    filters: [status: "Returned"]
     value_format_name: usd
+  }
+
+  measure: gross_margin_percentage {
+    type: number
+    label: "Gross Margin Percentage"
+    sql: 1.0*(${total_gross_margin}/${total_gross_revenue}) ;;
+    value_format_name: usd
+  }
+
+
+  measure: total_items {
+    type: count_distinct
+    label: "Total Items"
+    sql: ${inventory_item_id} ;;
+   }
+
+  measure: total_users {
+    type: count_distinct
+    label: "Total Users"
+    sql: ${user_id} ;;
+  }
+
+  measure: number_of_customers_returning {
+    type: count_distinct
+    label: "Number of Customers Returning Items"
+    sql: ${user_id} ;;
+    filters: [status: "Returned"]
+  }
+
+
+
+
+  measure: user_percent_returns {
+    type: number
+    label: "% of Users with Returns"
+    sql: 1.0*(${number_of_customers_returning}/${total_users} ;;
+  }
+
+  measure: average_spend_per_customer {
+    type: number
+    label: "Average Spend Per Customer"
+    sql: 1.0*(${total_sale_price}/${total_users}) ;;
+  }
+
+
+  measure: item_return_rate {
+    type: number
+    label: "Item Return Rate"
+    sql: 1.0*(${total_returned}/$(${total_items}) ;;
   }
 
   dimension_group: shipped {
