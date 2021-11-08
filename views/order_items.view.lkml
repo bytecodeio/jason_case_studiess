@@ -185,7 +185,7 @@ view: order_items {
     label: "Average Spend Per Customer"
     sql: 1.0*(${total_sale_price}/${total_users}) ;;
     value_format_name: usd
-    drill_fields: [users.age_tiers, users.gender]
+    drill_fields: [users.age_tiers, users.gender, average_spend_per_customer,total_items]
   }
 
 
