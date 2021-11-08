@@ -78,7 +78,7 @@ view: users {
   dimension: DayCheck {
     label: "Days as Customer"
     type: string
-    sql: DATEDIFF(day,${created_date},now()) ;;
+    sql: DATEDIFF(day,${created_date},CURRENT_DATE()) ;;
   }
 
   dimension: email {
