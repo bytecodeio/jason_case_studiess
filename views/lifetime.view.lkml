@@ -76,7 +76,7 @@
     type: tier
     tiers: [4.99,19.99,49.99,99.99,499.99,999.99]
     sql: ${total_revenue} ;;
-    style: classic
+    style: interval
   }
 
   measure: total_lifetime_orders {
