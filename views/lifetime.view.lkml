@@ -65,6 +65,19 @@
     sql: ${TABLE}.most_recent_purchase ;;
   }
 
+  dimension: total_revenue {
+    label: "Total Revenue"
+    type: number
+    sql: ${TABLE}.total_revenue ;;
+  }
+
+  dimension: revenue_tiers {
+    label: "Revenue Tiers"
+    type: tier
+    tiers: [4.99,19.99,49.99,99.99,499.99,999.99]
+    sql: ${total_revenue} ;;
+  }
+
   measure: total_lifetime_orders {
     description: "Use this for counting lifetime orders across many users"
     label: "Lifetime Orders"
