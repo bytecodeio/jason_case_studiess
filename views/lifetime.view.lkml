@@ -36,7 +36,7 @@
          user_id as user_id
          , COUNT(distinct ORDER_ID) as lifetime_orders
          , MAX(CREATED_AT) as most_recent_purchase
-         ,MIN(CREATED_AT) as first_purcase
+         ,MIN(CREATED_AT) as first_purchase
          ,SUM(SALE_PRICE) as total_revenue
        FROM order_items
        GROUP BY user_id
@@ -65,10 +65,29 @@
     sql: ${TABLE}.most_recent_purchase ;;
   }
 
+  dimension_group: first_purchased {
+    label: "First Order Date"
+    type: time
+    timeframes: [date, week,month,year]
+    sql: ${TABLE}.first_purchase ;;
+  }
+
   dimension: total_revenue {
     label: "Total Revenue"
     type: number
     sql: ${TABLE}.total_revenue ;;
+  }
+
+  dimension: days_from_purchase {
+    label: "Days from Last Purchase"
+    type: number
+    sql: DATEDIFF(day,${most_recent_purchase_date},CURRENT_DATE()) ;;
+  }
+
+  measure: average_lifetime_revenue {
+    label: "Average Lifetime Revenue"
+    type: average
+    sql: ${total_revenue} ;;
   }
 
   dimension: revenue_tiers {
