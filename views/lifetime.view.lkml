@@ -84,6 +84,13 @@
     sql: DATEDIFF(day,${most_recent_purchase_date},CURRENT_DATE()) ;;
   }
 
+  dimension: is_active {
+    description: "Customer is considered active if a purchase has been made in the last 90 days"
+    label: "Is Active"
+    type: yesno
+    sql: ${days_from_purchase}<=90;;
+  }
+
   measure: average_lifetime_revenue {
     label: "Average Lifetime Revenue"
     type: average
