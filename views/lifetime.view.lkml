@@ -120,6 +120,12 @@
     style: integer
   }
 
+  measure: total_customers {
+    label: "Total Customers"
+    type: count_distinct
+    sql: ${user_id} ;;
+  }
+
   measure: total_lifetime_orders {
     description: "Use this for counting lifetime orders across many users"
     label: "Lifetime Orders"
