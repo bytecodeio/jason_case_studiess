@@ -87,6 +87,17 @@ view: users {
     sql: DATEDIFF(month,${created_date},CURRENT_DATE()) ;;
   }
 
+  measure: average_days_from_signup {
+    label: "Average Number of Days Since Sign Up"
+    type: average
+    sql: ${DayCheck} ;;
+  }
+  measure: average_months_from_signup {
+    label: "Average Number of Months Since Sign Up"
+    type: average
+    sql: ${MonthCheck} ;;
+  }
+
   dimension: new_customer {
     type: yesno
     label: "New Customer"
