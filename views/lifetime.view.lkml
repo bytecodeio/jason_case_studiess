@@ -84,6 +84,13 @@
     sql: DATEDIFF(day,${most_recent_purchase_date},CURRENT_DATE()) ;;
   }
 
+  measure: average_days_from_purchase {
+    label: "Average Number of Days from last puchase"
+    type: average
+    sql: ${days_from_purchase} ;;
+  }
+
+
   dimension: is_active {
     description: "Customer is considered active if a purchase has been made in the last 90 days"
     label: "Is Active"
