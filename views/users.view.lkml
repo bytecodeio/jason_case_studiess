@@ -98,6 +98,20 @@ view: users {
     sql: ${MonthCheck} ;;
   }
 
+  dimension: day_tiers {
+    label: "Sign Up Tiers by Day Cohort"
+    type: tier
+    tiers: [1,7,30,90,180,365]
+    style: integer
+  }
+
+  dimension: month_tiers {
+    label: "Sign Up Tiers by Month Cohort"
+    type: tier
+    tiers: [1,6,12,24,36,48]
+    style: integer
+  }
+
   dimension: new_customer {
     type: yesno
     label: "New Customer"
