@@ -44,6 +44,7 @@
    }
 
   dimension: user_id {
+    primary_key: yes
      label: "Customer ID"
      description: "Unique ID for each user that has ordered"
      type: number
