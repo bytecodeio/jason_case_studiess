@@ -103,6 +103,7 @@ view: users {
     type: tier
     tiers: [1,7,30,90,180,365]
     style: integer
+    sql: ${DayCheck} ;;
   }
 
   dimension: month_tiers {
@@ -110,6 +111,7 @@ view: users {
     type: tier
     tiers: [1,6,12,24,36,48]
     style: integer
+    sql: ${MonthCheck} ;;
   }
 
   dimension: new_customer {
