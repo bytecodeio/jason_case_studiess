@@ -112,6 +112,14 @@
     style: interval
   }
 
+  dimension: order_tiers {
+    label: "Total Orders Tiers"
+    type: tier
+    tiers: [1,2,5,9,10]
+    sql: ${lifetime_orders} ;;
+    style: integer
+  }
+
   measure: total_lifetime_orders {
     description: "Use this for counting lifetime orders across many users"
     label: "Lifetime Orders"
