@@ -77,8 +77,14 @@ view: users {
 
   dimension: DayCheck {
     label: "Days as Customer"
-    type: string
+    type: number
     sql: DATEDIFF(day,${created_date},CURRENT_DATE()) ;;
+  }
+
+  dimension: MonthCheck {
+    label: "Months as Customer"
+    type: number
+    sql: DATEDIFF(month,${created_date},CURRENT_DATE()) ;;
   }
 
   dimension: new_customer {
