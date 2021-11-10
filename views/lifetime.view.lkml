@@ -102,6 +102,7 @@
     label: "Average Lifetime Revenue"
     type: average
     sql: ${total_revenue} ;;
+    value_format_name: usd
   }
 
   dimension: revenue_tiers {
