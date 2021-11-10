@@ -101,7 +101,7 @@ view: users {
   dimension: day_tiers {
     label: "Sign Up Tiers by Day Cohort"
     type: tier
-    tiers: [1,7,30,90,180,365]
+    tiers: [365,730,1095,1460]
     style: integer
     sql: ${DayCheck} ;;
   }
@@ -109,7 +109,7 @@ view: users {
   dimension: month_tiers {
     label: "Sign Up Tiers by Month Cohort"
     type: tier
-    tiers: [1,6,12,24,36,48]
+    tiers: [1,6,12,24,36,48,60]
     style: integer
     sql: ${MonthCheck} ;;
   }
