@@ -79,6 +79,12 @@ view: customer_ranking {
     sql: ${order_sequence} = 1 ;;
   }
 
+  dimension:is_repeat{
+    type: yesno
+    description: "Has the customer ordered more than one time"
+    sql: ${order_sequence} > 1 ;;
+  }
+
   measure: average_days_between_orders {
     type: average
     sql: round(${days_days_between_orders},0) ;;

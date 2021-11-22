@@ -81,6 +81,12 @@ explore: order_items {
     sql_on: ${lifetime.user_id} = ${order_items.user_id} ;;
     relationship: many_to_one
   }
+
+  join: customer_ranking {
+    type: left_outer
+    sql_on: ${customer_ranking.user_id} = ${order_items.user_id} ;;
+    relationship: many_to_one
+  }
 }
 
 # explore: products {
