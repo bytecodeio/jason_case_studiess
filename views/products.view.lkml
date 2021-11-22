@@ -34,6 +34,12 @@ view: products {
     sql: ${TABLE}."CATEGORY" ;;
   }
 
+  filter: category_filter {
+    type: string
+    sql: ${category} ;;
+    }
+
+
   dimension: cost {
     type: number
     sql: ${TABLE}."COST" ;;
