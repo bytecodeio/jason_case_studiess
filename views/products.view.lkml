@@ -22,8 +22,8 @@ view: products {
     type: string
     sql: ${TABLE}."BRAND" ;;
         link: {
-        label: "Google"
-        url: "http://www.google.com/search?q={{ value }}"
+        label: "Category Dashboard"
+        url: "https://looker.bytecode.io/dashboards-next/hefkD5sqVDQzypeCzKKXxi?brand={{ value }}"
 
             }
 
