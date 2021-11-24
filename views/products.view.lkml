@@ -23,7 +23,7 @@ view: products {
     sql: ${TABLE}."BRAND" ;;
         link: {
         label: "Category Dashboard"
-        url: "https://looker.bytecode.io/dashboards-next/hefkD5sqVDQzypeCzKKXxi?brand={{ value }}"
+        url: "https://looker.bytecode.io/dashboards-next/hefkD5sqVDQzypeCzKKXxi?brand={{ _filters['brand'] | url_encode }}"
 
             }
 
