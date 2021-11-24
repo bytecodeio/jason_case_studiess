@@ -24,6 +24,7 @@ view: products {
         link: {
         label: "Google"
         url: "http://www.google.com/search?q={{ value }}"
+
             }
 
   }
@@ -32,6 +33,10 @@ view: products {
   dimension: category {
     type: string
     sql: ${TABLE}."CATEGORY" ;;
+    link: {
+      label: "Brand Comparison"
+      url: ""
+    }
   }
 
   filter: category_filter {
@@ -78,6 +83,10 @@ view: products {
   dimension: retail_price {
     type: number
     sql: ${TABLE}."RETAIL_PRICE" ;;
+  }
+
+  measure: filtered_total {
+
   }
 
   dimension: sku {
