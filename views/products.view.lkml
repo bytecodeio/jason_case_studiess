@@ -21,28 +21,27 @@ view: products {
   dimension: brand {
     type: string
     sql: ${TABLE}."BRAND" ;;
-        link: {
-        label: "Category Dashboard"
-        url: "https://looker.bytecode.io/dashboards-next/hefkD5sqVDQzypeCzKKXxi?brand={{ value }}"
+    html: <a href="/dashboards-next/hefkD5sqVDQzypeCzKKXxi?BrandFilter={{ value | url_encode }}">{{value}}</a> ;;
 
+    link: {
+      label: "Category Dashboard"
+      url: "/dashboards-next/hefkD5sqVDQzypeCzKKXxi?BrandFilter={{ value | url_encode }}"
+    }
             }
-
-  }
 
 
   dimension: category {
     type: string
     sql: ${TABLE}."CATEGORY" ;;
-    link: {
-      label: "Brand Comparison"
-      url: ""
-    }
-  }
+     }
 
-  filter: category_filter {
+
+
+  filter: BrandFilter {
     type: string
-    sql: ${category} ;;
+    sql: ${brand} ;;
     }
+
 
 
   dimension: cost {
