@@ -45,6 +45,12 @@ view: order_items {
     sql: ${TABLE}."DELIVERED_AT" ;;
   }
 
+  dimension: month_alpha {
+    label: "Month"
+    type: string
+    sql: month(${created_date}) ;;
+  }
+
   # Here's what a typical dimension looks like in LookML.
   # A dimension is a groupable field that can be used to filter query results.
   # This dimension will be called "Inventory Item ID" in Explore.
