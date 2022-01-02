@@ -48,7 +48,7 @@ view: order_items {
   dimension: month_alpha {
     label: "Month"
     type: string
-    sql: month(${created_date}) ;;
+    sql: MONTHNAME(${TABLE}."CREATED_AT") ;;
   }
 
   # Here's what a typical dimension looks like in LookML.
