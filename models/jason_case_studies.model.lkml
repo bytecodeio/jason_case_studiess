@@ -4,6 +4,7 @@ connection: "snowlooker"
 # include all the views
 include: "/views/**/*.view"
 
+##test code
 
 ##test
 # Datagroups define a caching policy for an Explore. To learn more,
