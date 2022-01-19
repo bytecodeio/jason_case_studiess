@@ -16,6 +16,8 @@ view: users {
 
 
 
+
+
   # Here's what a typical dimension looks like in LookML.
   # A dimension is a groupable field that can be used to filter query results.
   # This dimension will be called "Age" in Explore.
@@ -139,6 +141,7 @@ view: users {
     type: string
     sql: ${TABLE}."LAST_NAME" ;;
   }
+
 
 
 
