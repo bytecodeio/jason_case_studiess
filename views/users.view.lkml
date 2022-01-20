@@ -14,10 +14,7 @@ view: users {
     sql: ${TABLE}."ID" ;;
   }
 
- measure: total_user {
-   type: count_distinct
-   sql: ${id} ;;
- }
+
 
 
 
