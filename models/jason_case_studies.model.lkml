@@ -14,7 +14,7 @@ datagroup: jason_case_studies_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
 }
-
+## test comment
 persist_with: jason_case_studies_default_datagroup
 
 # Explores allow you to join together different views (database tables) based on the
