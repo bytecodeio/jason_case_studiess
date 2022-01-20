@@ -14,7 +14,10 @@ view: users {
     sql: ${TABLE}."ID" ;;
   }
 
-
+  measure: total_users {
+    type: count_distinct
+    sql: ${id} ;;
+  }
 
 
 
@@ -144,6 +147,10 @@ view: users {
     sql: ${TABLE}."LAST_NAME" ;;
   }
 
+ dimension: full_name {
+   type: string
+   sql: ${first_name}||' '||${last_name} ;;
+ }
 
 
 
