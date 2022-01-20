@@ -147,10 +147,7 @@ view: users {
     sql: ${TABLE}."LAST_NAME" ;;
   }
 
-  dimension: full_name {
-    type: string
-    sql: ${first_name}||' '||${last_name} ;;
-  }
+
 
 
 
