@@ -95,6 +95,9 @@ view: inventory_items {
   dimension: product_sku {
     type: string
     sql: ${TABLE}.PRODUCT_SKU ;;
+    link:
+    {label: "test"
+      url:"https://raw.githubusercontent.com/whitlock972/Custom_Visualizations/main/hello_world.js"}
   }
 
   dimension_group: sold {
@@ -115,4 +118,5 @@ view: inventory_items {
     type: count
     drill_fields: [id, product_name, products.name, products.id, order_items.count]
   }
+
 }
