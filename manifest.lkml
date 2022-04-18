@@ -8,7 +8,7 @@ visualization: {
   id: "hello_world"
   label: "Jason Custom Viz2"
   ##file: "html_value.js"
-  url: "https://raw.githubusercontent.com/seanlhiggins/custom_vis/886c2cbd74ea05976630e87195566ffa62720e82/hello_world.js"
+  url: "https://raw.githubusercontent.com/whitlock972/Custom_Visualizations/main/hello_world.js"
 }
 
 # # Use local_dependency: To enable referencing of another project
