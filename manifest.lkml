@@ -6,9 +6,9 @@ project_name: "jason_case_studies"
 
 visualization: {
   id: "html_value_jw"
-  label: "Jason Custom HTML Single Value"
+  label: "Jason Custom Viz"
   ##file: "html_value.js"
-  url: "https://raw.githubusercontent.com/whitlock972/Custom_Visualizations/main/hello_world.js"
+  url: "https://raw.githubusercontent.com/looker/viz-radial_gauge-marketplace/ec868ebfc12d9b5a7956f98b22fc8c8515471a00/radial-gauge/RadialGauge.js"
 }
 
 # # Use local_dependency: To enable referencing of another project

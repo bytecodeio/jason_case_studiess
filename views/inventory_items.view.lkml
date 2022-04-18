@@ -2,7 +2,7 @@
 view: inventory_items {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: "PUBLIC"."INVENTORY_ITEMS"
+  sql_table_name: looker-onboarding.ecommerce.inventory_items
     ;;
   drill_fields: [id]
   # This primary key is the unique key for this table in the underlying database.
@@ -11,7 +11,7 @@ view: inventory_items {
   dimension: id {
     primary_key: yes
     type: number
-    sql: ${TABLE}."ID" ;;
+    sql: ${TABLE}.ID ;;
   }
 
   # Here's what a typical dimension looks like in LookML.
@@ -20,7 +20,7 @@ view: inventory_items {
 
   dimension: cost {
     type: number
-    sql: ${TABLE}."COST" ;;
+    sql: ${TABLE}.COST ;;
   }
 
   # A measure is a field that uses a SQL aggregate function. Here are defined sum and average
@@ -53,48 +53,48 @@ view: inventory_items {
       quarter,
       year
     ]
-    sql: ${TABLE}."CREATED_AT" ;;
+    sql: ${TABLE}.CREATED_AT ;;
   }
 
   dimension: product_brand {
     type: string
-    sql: ${TABLE}."PRODUCT_BRAND" ;;
+    sql: ${TABLE}.PRODUCT_BRAND ;;
   }
 
   dimension: product_category {
     type: string
-    sql: ${TABLE}."PRODUCT_CATEGORY" ;;
+    sql: ${TABLE}.PRODUCT_CATEGORY ;;
   }
 
   dimension: product_department {
     type: string
-    sql: ${TABLE}."PRODUCT_DEPARTMENT" ;;
+    sql: ${TABLE}.PRODUCT_DEPARTMENT ;;
   }
 
   dimension: product_distribution_center_id {
     type: number
-    sql: ${TABLE}."PRODUCT_DISTRIBUTION_CENTER_ID" ;;
+    sql: ${TABLE}.PRODUCT_DISTRIBUTION_CENTER_ID ;;
   }
 
   dimension: product_id {
     type: number
     # hidden: yes
-    sql: ${TABLE}."PRODUCT_ID" ;;
+    sql: ${TABLE}.PRODUCT_ID ;;
   }
 
   dimension: product_name {
     type: string
-    sql: ${TABLE}."PRODUCT_NAME" ;;
+    sql: ${TABLE}.PRODUCT_NAME ;;
   }
 
   dimension: product_retail_price {
     type: number
-    sql: ${TABLE}."PRODUCT_RETAIL_PRICE" ;;
+    sql: ${TABLE}.PRODUCT_RETAIL_PRICE;;
   }
 
   dimension: product_sku {
     type: string
-    sql: ${TABLE}."PRODUCT_SKU" ;;
+    sql: ${TABLE}.PRODUCT_SKU ;;
   }
 
   dimension_group: sold {

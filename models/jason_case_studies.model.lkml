@@ -1,5 +1,5 @@
 # Define the database connection to be used for this model.
-connection: "snowlooker"
+connection: "ecommerce"
 
 # include all the views
 include: "/views/**/*.view"
@@ -94,6 +94,7 @@ explore: order_items {
   }
 }
 
+explore: inventory_items {}
 # explore: products {
 #   join: distribution_centers {
 #     type: left_outer
