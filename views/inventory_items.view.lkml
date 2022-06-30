@@ -29,12 +29,12 @@ view: inventory_items {
 
       form_param: {
         name: "name string"
-        type:  select
+        type:  string
         label: "possibly-localized-string"
-        option: {
-          name: "name string"
-          label: "possibly-localized-string"
-        }
+        # option: {
+        #   name: "name string"
+        #   label: "possibly-localized-string"
+        # }
         required: yes
         description: "possibly-localized-string"
         default: "string"
