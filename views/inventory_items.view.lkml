@@ -18,13 +18,26 @@ view: inventory_items {
       sql: ${id} ;;
 
     action: {
-      label: "Label to Appear in Action Menu"
-      url: "https://example.com/posts"
+      label: "Action Link Here"
+      url: "https://webhook.site/be59ad50-f970-4742-82bb-bed8bda42004"
       icon_url: "https://looker.com/favicon.ico"
       form_url: "https://example.com/ping/{{ value }}/form.json"
       param: {
         name: "name string"
         value: "value string"
+      }
+
+      form_param: {
+        name: "name string"
+        type:  select
+        label: "possibly-localized-string"
+        option: {
+          name: "name string"
+          label: "possibly-localized-string"
+        }
+        required: yes
+        description: "possibly-localized-string"
+        default: "string"
       }
   }
 }
