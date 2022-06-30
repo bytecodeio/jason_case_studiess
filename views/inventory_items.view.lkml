@@ -11,8 +11,23 @@ view: inventory_items {
   dimension: id {
     primary_key: yes
     type: number
-    sql: ${TABLE}.ID ;;
+    sql: ${TABLE}.ID ;;}
+
+    measure:test{
+      type: count_distinct
+      sql: ${id} ;;
+
+    action: {
+      label: "Label to Appear in Action Menu"
+      url: "https://example.com/posts"
+      icon_url: "https://looker.com/favicon.ico"
+      form_url: "https://example.com/ping/{{ value }}/form.json"
+      param: {
+        name: "name string"
+        value: "value string"
+      }
   }
+}
 
   # Here's what a typical dimension looks like in LookML.
   # A dimension is a groupable field that can be used to filter query results.
