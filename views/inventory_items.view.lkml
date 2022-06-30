@@ -30,14 +30,15 @@ view: inventory_items {
       form_param: {
         name: "name string"
         type:  string
-        label: "possibly-localized-string"
+        label: "input data"
         # option: {
         #   name: "name string"
         #   label: "possibly-localized-string"
         # }
         required: yes
         description: "possibly-localized-string"
-        default: "string"
+        default: "something"
+
       }
   }
 }
