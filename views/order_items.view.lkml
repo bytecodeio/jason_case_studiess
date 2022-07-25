@@ -228,7 +228,7 @@ view: order_items {
     sql: ${TABLE}."USER_ID" ;;
   }
 
-  measure: count {
+  measure: count_newname {
     type: count
     drill_fields: [detail*]
   }
