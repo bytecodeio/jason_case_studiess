@@ -143,7 +143,7 @@ view: inventory_items {
     sql: ${TABLE}."SOLD_AT" ;;
   }
 
-  measure: count {
+  measure: count_testerror {
     type: count
     drill_fields: [id, product_name, products.name, products.id, order_items.count]
   }
